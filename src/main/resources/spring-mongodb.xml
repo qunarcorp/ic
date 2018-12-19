@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xsi:schemaLocation="http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo-2.0.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <mongo:db-factory id="mongoDbFactory"
+                      client-uri="mongodb://${mongo.username}:${mongo.password}@${mongo.hosts}/${mongo.database}"/>
+
+    <!-- by default look for a Mongo object named 'mongo' - default name used for the converter is 'mappingConverter' -->
+    <mongo:mapping-converter base-package="com.qunar.cm.ic.dao.converter">
+        <mongo:custom-converters>
+            <mongo:converter>
+                <bean class="com.qunar.cm.ic.dao.converter.EventReadConverter"/>
+            </mongo:converter>
+            <mongo:converter>
+                <bean class="com.qunar.cm.ic.dao.converter.EventWriteConverter"/>
+            </mongo:converter>
+        </mongo:custom-converters>
+    </mongo:mapping-converter>
+
+    <!-- set the mapping converter to be used by the MongoTemplate -->
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>
+        <constructor-arg name="mongoConverter" ref="mappingConverter"/>
+    </bean>
+
+    <!--<bean class="org.springframework.data.mongodb.core.mapping.event.LoggingEventListener"/>-->
+
+</beans>
