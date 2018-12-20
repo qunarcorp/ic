@@ -18,7 +18,7 @@ public class EventConsumerServiceImpl implements EventConsumerService {
 
     @Override
     public long waitForNextEvent(String token, Date deadline) throws TimeoutException {
-        if (new Date().before(deadline)) {
+        if (new Date().after(deadline)) {
             throw new TimeoutException();
         }
         try {
