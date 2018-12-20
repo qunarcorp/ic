@@ -1,4 +1,4 @@
-[上一页](install.md)
+[上一页](design.md)
 [回目录](../../README.md)
 [下一页](table.md)
 
@@ -23,6 +23,6 @@
 7. IC返回新消息给consumer
 
 
-[上一页](install.md)
+[上一页](design.md)
 [回目录](../../README.md)
 [下一页](table.md)
