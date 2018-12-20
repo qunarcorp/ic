@@ -1,6 +1,6 @@
 [上一页](quickstart.md)
 [回目录](../../README.md)
-[下一页](message.md)
+[下一页](design.md)
 
 # 安装
 
@@ -79,4 +79,4 @@ mongo.database=dc
 
 [上一页](quickstart.md)
 [回目录](../../README.md)
-[下一页](message.md)
+[下一页](design.md)
