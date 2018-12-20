@@ -1,6 +1,6 @@
 [上一页](install.md)
 [回目录](../../README.md)
-[下一页](table.md)
+[下一页](arch.md)
 
 # 设计背景
 
@@ -19,4 +19,4 @@
 
 [上一页](install.md)
 [回目录](../../README.md)
-[下一页](table.md)
+[下一页](arch.md)
