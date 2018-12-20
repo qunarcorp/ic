@@ -56,7 +56,8 @@ public class ListenerServiceImpl implements ListenerService {
         ListenerFetchResult result = new ListenerFetchResult(listener.getCode(), maxResults);
         result.setList(Collections.emptyList());
 
-        if (longPoll) {
+        fillResult(listener.getLastEventId(), types, maxResults, result);
+        if (longPoll && result.isEmpty()) {
             Calendar calendar = Calendar.getInstance();
             calendar.setTime(new Date());
             calendar.add(Calendar.SECOND, 10);
@@ -70,10 +71,8 @@ public class ListenerServiceImpl implements ListenerService {
                 }
                 fillResult(listener.getLastEventId(), types, maxResults, result);
             }
-        } else {
-            fillResult(listener.getLastEventId(), types, maxResults, result);
         }
-
+        
         if (!result.isEmpty()) {
             //重新生成code，如果返回的结果为空，则code不变
             listener.setCode(UUID.randomUUID().toString());
