@@ -30,7 +30,7 @@ IC是去哪儿公司内部CI、CD以及devops体系建设过程中使用的消�
 * [进阶说明](docs/cn/advance.md)
 
 
-# 技术支持
+## 技术支持
 
 ### QQ群
 ![QQ](docs/images/qq.png)
