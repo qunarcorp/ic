@@ -18,7 +18,7 @@
         <java_target_version>1.8</java_target_version>
         <java.version>1.8</java.version>
 
-        <springboot.version>2.0.4.RELEASE</springboot.version>
+        <springboot.version>2.5.12</springboot.version>
         <org.springframework.version>5.0.8.RELEASE</org.springframework.version>
 
         <hc.httpclient.version>4.5.2</hc.httpclient.version>
