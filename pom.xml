@@ -25,7 +25,7 @@
         <hc.httpcore.version>4.4.4</hc.httpcore.version>
 
         <validation-api.version>2.0.1.Final</validation-api.version>
-        <hibernate-validator.version>6.0.11.Final</hibernate-validator.version>
+        <hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
         <dbcp.version>1.4</dbcp.version>
 
         <com.fasterxml.jackson.version>2.9.6</com.fasterxml.jackson.version>
